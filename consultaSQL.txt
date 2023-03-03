@@ -1,0 +1,6 @@
+SELECT 
+	folder.folderID, folder.access_type, employee.emp_name, department.dept_name, country.country_name, country.continent
+FROM employee 
+INNER JOIN folder ON employee.emp_id=folder.emp_id 
+INNER JOIN department ON employee.dept_id = department.department_id 
+INNER JOIN country ON department.country_id = country.country_id;
